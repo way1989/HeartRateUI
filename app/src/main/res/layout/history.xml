@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/sv_container_history"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/ic_history_bg"
+    android:fadeScrollbars="true"
+    tools:context="com.sherchen.heartrate.History">
+
+    <LinearLayout
+        android:id="@+id/ll_bar_history"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        android:padding="@dimen/history_padding">
+
+        <TextView
+            style="@style/HeartRate"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/history_item_bg"
+            android:gravity="center"
+            android:minHeight="@dimen/history_list_item_minHeight"
+            android:text="@string/history_title"
+            android:textSize="@dimen/history_title_text_size" />
+
+
+        <com.github.mikephil.charting.BarChart
+            android:id="@+id/bc_history"
+            android:layout_width="match_parent"
+            android:layout_height="251dp"
+            android:background="@android:color/transparent" />
+
+        <com.sherchen.heartrate.views.FullShowListViewew
+            android:id="@+id/lv_history"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ll_bar_history"
+            android:layout_marginTop="@dimen/history_list_margin_top"
+            android:dividerHeight="@dimen/history_list_divider_height" />
+    </LinearLayout>
+</ScrollView>
